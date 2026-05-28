@@ -1,4 +1,4 @@
-CFLAGS = -Wall -Wextra -O3 -march=native -flto
+CFLAGS = -Wall -Wextra -O3 -flto
 LDFLAGS = -lpthread -flto
 
 .PHONY: all clean install
