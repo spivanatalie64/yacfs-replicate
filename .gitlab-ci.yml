@@ -1,0 +1,16 @@
+image: archlinux:latest
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - pacman -Syu --noconfirm base-devel
+    - make clean
+    - make
+  artifacts:
+    paths:
+      - yacfs-send
+      - yacfs-receive
+    expire_in: 1 week
