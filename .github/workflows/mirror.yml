@@ -1,0 +1,14 @@
+name: Mirror
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  mirror:
+    uses: spivanatalie64/.github/.github/workflows/mirror.yml@main
+    with:
+      repo-name: "yacfs-replicate"
+    secrets:
+      GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+      CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
